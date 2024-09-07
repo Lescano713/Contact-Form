@@ -17,9 +17,52 @@
     margin: 0;
     font-family: 'Karla';
 }
-
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 body{
     padding: 0;
     width: 100vw;
-    height: 100%;
+    min-height: 100vh;
+    background-color: var(--Green200lighter);
+}
+
+main{
+    padding: 1em;
+    border-radius: 15px;
+    background-color: var(--White);
+    width: 90%;
+    max-width: 50em;
+    button{
+        padding: 1em;
+        border: none;
+        background-color: var(--Green600medium);
+        color: var(--White);
+        width: 100%;
+    }
+}
+
+section{
+    display: grid;
+    label{
+        color: var(--Grey900darker);
+        font-size: 16px;
+    }
+    input,textarea{
+        border-radius: 5px;
+        padding: 0.5em;
+        border: 1px solid var(--Grey900darker);
+    }
+    input{
+        margin-left: 5px;
+    }
+}
+
+
+@media(min-width : 600px){
+    section.data, section.query{
+        grid-template-columns: 1fr 1fr;
+    }
 }
