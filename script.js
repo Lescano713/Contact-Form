@@ -10,7 +10,12 @@ function validationName(){
             p.textContent = "The field is required"
             container.appendChild(p)
         }else{
-            alert('good')
+            const successMessage = document.createElement('article');
+            successMessage.classList.add('success-message')
+            successMessage.innerHTML =`
+            <h3 class="success-title">Message Sent!</h3>
+            <p>Thanks for completing the form, We'll be in touch soon!</p>`
+            document.body.appendChild(successMessage)
         }
     });
 }
