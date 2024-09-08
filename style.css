@@ -77,9 +77,10 @@ section.consent{
     grid-template-columns: 20px 1fr;
 }
 
-/* .errorState{
+.errorState{
     color: var(--Red);
-} */
+}
+
 @media(min-width : 450px){
     section.data, section.query{
         grid-template-columns: 1fr 1fr;
