@@ -30,22 +30,28 @@ body{
 }
 
 main{
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 15px;
     background-color: var(--White);
-    width: 90%;
-    max-width: 50em;
+    margin: 0 1em;
+    width: 50em;
+    max-width: 90%;
     button{
-        padding: 1em;
+        padding: 0.7em;
         border: none;
         background-color: var(--Green600medium);
         color: var(--White);
         width: 100%;
+        font-size: 16px;
+        border-radius: 10px;
     }
 }
 
 section{
     display: grid;
+    grid-template-columns: 1fr;
+    margin: 15px 0;
+    gap: 12px;
     label{
         color: var(--Grey900darker);
         font-size: 16px;
@@ -54,15 +60,31 @@ section{
         border-radius: 5px;
         padding: 0.5em;
         border: 1px solid var(--Grey900darker);
+        font-size: 16px;
     }
-    input{
+    /* input{
         margin-left: 5px;
-    }
+    } */
 }
 
+section.data{
+    label{
+        display: flex;
+        flex-direction: column;
+    }
+}
+section.consent{
+    grid-template-columns: 20px 1fr;
+}
 
-@media(min-width : 600px){
+/* .errorState{
+    color: var(--Red);
+} */
+@media(min-width : 450px){
     section.data, section.query{
         grid-template-columns: 1fr 1fr;
+    }
+    section.data .email-input{
+        grid-column: span 2 ;
     }
 }
