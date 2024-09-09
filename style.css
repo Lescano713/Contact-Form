@@ -24,19 +24,22 @@ body, .success-title{
 }
 body{
     padding: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background-color: var(--Green200lighter);
     position: relative;
 }
 
 main{
-    padding: 1.5em;
+    padding: 1.2em;
     border-radius: 15px;
     background-color: var(--White);
-    margin: 0 1em;
+    margin: 1em;
     width: 50em;
     max-width: 90%;
+    h1{
+        color: var(--Grey900darker);
+    }
     button{
         padding: 0.7em;
         border: none;
@@ -48,33 +51,52 @@ main{
     }
 }
 
-section{
+fieldset{
     display: grid;
     grid-template-columns: 1fr;
-    margin: 15px 0;
-    gap: 12px;
-    label{
+    border: none;
+    margin: 10px 0;
+    gap: 10px;
+    label, legend{
         color: var(--Grey900darker);
         font-size: 16px;
     }
     input,textarea{
         border-radius: 5px;
         padding: 0.5em;
-        border: 1px solid var(--Grey900darker);
+        border: 1px solid var(--Grey500medium);
         font-size: 16px;
     }
-    /* input{
-        margin-left: 5px;
-    } */
+    textarea{
+        resize:none;
+        height: 10em;
+    }
+    article{
+        display: grid;
+        gap: 10px;
+    }
+    legend{
+        margin-bottom: 10px;
+    }
 }
 
-section.data{
+fieldset.data{
     label{
         display: flex;
         flex-direction: column;
     }
 }
-section.consent{
+fieldset.query{
+    label{
+        border: 1px solid var(--Grey500medium);
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+    input{
+        margin-right: 10px;
+    }
+}
+fieldset.consent{
     grid-template-columns: 20px 1fr;
 }
 
@@ -112,10 +134,10 @@ article.success-message{
 
 }
 @media(min-width : 450px){
-    section.data, section.query{
+    fieldset.data, fieldset.query article{
         grid-template-columns: 1fr 1fr;
     }
-    section.data .email-input{
+    fieldset.data .email-input{
         grid-column: span 2 ;
     }
 }
