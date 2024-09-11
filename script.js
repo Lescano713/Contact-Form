@@ -3,14 +3,19 @@ const submit = document.querySelector('button[type="submit"]');
 
 const response = [];
 
-// const validation = {
-//     'email': 
-// }
+const validation = {
+    email: '@',
+    text: '',
+    query: 'check',
+    message: '',
+    
+}
 
 function validationName(){
     inputsName.forEach(input => {
         const container = input.closest('label');
         if (input.value === "") {
+            container.style.border = "1px solid red"
             const p = document.createElement('p');
             p.classList.add('errorState');
             p.textContent = "The field is required";
